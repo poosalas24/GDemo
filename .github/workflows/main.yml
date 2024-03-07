@@ -11,7 +11,7 @@ jobs:
       run: mkdir reports
       
     - name: Run JMeter Tests
-      uses: ./
+      uses: actions/checkout@v2
       with:
         test-plan-path: './sampleJmetersc.jmx'
         args: "-e -o ./reports/html/"
