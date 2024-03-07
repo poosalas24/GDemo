@@ -4,11 +4,10 @@
    pull_request:
     branches: [ main ]
    workflow_dispatch:
-   
-jobs:
- build:
+   jobs:
+   build:
     runs-on: ubuntu-latest
-    name: JMeter Test Execution
+    -name: JMeter Test Execution
     steps:
        - name: Ckeckout
          uses: actions/checkout@v2    
