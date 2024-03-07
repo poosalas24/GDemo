@@ -1,21 +1,24 @@
-on: [push]
+on:
+   push:
+    branches: [ main ]
+   pull_request:
+    branches: [ main ]
+   workflow_dispatch:
+   
 jobs:
-  jmeter_job:
+ build:
     runs-on: ubuntu-latest
     name: JMeter Test Execution
     steps:      
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Create reports directory
-      run: mkdir reports
       
-    - name: Run JMeter Tests
-      uses: actions/checkout@v2
+    - name: PerfAction for Jmeter
+      uses: QAInsights/PerfAction@2.0
       with:
         test-plan-path: './sampleJmetersc.jmx'
        
-        
     - name: Upload Results
       uses: actions/upload-artifact@v2
       with:
