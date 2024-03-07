@@ -1,20 +1,23 @@
- on:
+on:
    push:
     branches: [ main ]
    pull_request:
     branches: [ main ]
    workflow_dispatch:
-   jobs:
-   build:
+   
+jobs:
+ build:
     runs-on: ubuntu-latest
-    -name: JMeter Test Execution
-    steps:
-       - name: Ckeckout
-         uses: actions/checkout@v2    
-       - name: PerfAction for Jmeter
-         uses: QAInsights/PerfAction@2.0
-         with:
-         test-plan-path: './sampleJmetersc.jmx'
+    name: JMeter Test Execution
+    steps:      
+    - name: Checkout
+      uses: actions/checkout@v2
+
+      
+    - name: PerfAction for Jmeter
+      uses: QAInsights/PerfAction@5.6.2
+      with:
+        test-plan-path: './sampleJmetersc.jmx'
        
     - name: Upload Results
       uses: actions/upload-artifact@v2
