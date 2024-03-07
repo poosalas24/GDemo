@@ -15,7 +15,7 @@ jobs:
 
       
     - name: PerfAction for Jmeter
-      uses: QAInsights/PerfAction@5.6.2
+      uses: QAInsights/PerfAction@3.0
       with:
         test-plan-path: './sampleJmetersc.jmx'
        
