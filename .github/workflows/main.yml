@@ -1,4 +1,4 @@
-on:
+ on:
    push:
     branches: [ main ]
    pull_request:
@@ -10,14 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     name: JMeter Test Execution
     steps:      
-    - name: Checkout
-      uses: actions/checkout@v3
-
-      
-    - name: PerfAction for Jmeter
-      uses: QAInsights/PerfAction@2.0
-      with:
-        test-plan-path: './sampleJmetersc.jmx'
+    
+     uses: actions/checkout@v2    
+       - name: PerfAction for Jmeter
+         uses: QAInsights/PerfAction@2.0
+         with:
+         test-plan-path: './sampleJmetersc.jmx'
        
     - name: Upload Results
       uses: actions/upload-artifact@v2
