@@ -9,7 +9,8 @@ jobs:
  build:
     runs-on: ubuntu-latest
     name: JMeter Test Execution
-    steps:      
+    steps:
+       - name: Ckeckout
          uses: actions/checkout@v2    
        - name: PerfAction for Jmeter
          uses: QAInsights/PerfAction@2.0
