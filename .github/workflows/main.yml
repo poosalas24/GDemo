@@ -17,8 +17,9 @@ jobs:
     - name: PerfAction for Jmeter
       uses: QAInsights/PerfAction@v5.6.2
       with:
-        test-plan-path: './sampleJmetersc.jmx'
-       
+        test-plan-path: 
+            for i in $( ls /*.jmx); do
+              $i;
     - name: Upload Results
       uses: actions/upload-artifact@v3
       with:
