@@ -1,5 +1,5 @@
 # This is a workflow to help you run all JMeter scripts with Actions
-name: jmeterExecution 5min
+name: jmeterExecution 5min2apr
 on:
  schedule: 
  - cron: "*/500 * * * *"
