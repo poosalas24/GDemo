@@ -2,7 +2,7 @@
 name: jmeterExecution 5min2apr
 on:
  schedule: 
- - cron: "*/500 * * * *"
+ - cron: "*/50 * * * *"
  push:
     branches: [ main ]
 # Allows you to run this workflow manually from the Actions tab
