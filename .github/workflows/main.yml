@@ -1,8 +1,8 @@
 # This is a workflow to help you run all JMeter scripts with Actions
-name: jmeterExecution 5min2apr
+name: jmeterExecution 8:30
 on:
  schedule: 
- - cron: "*/10 */01 * * *"
+ - cron: "30 8 * * 1-5"
  push:
     branches: [ main ]
 # Allows you to run this workflow manually from the Actions tab
